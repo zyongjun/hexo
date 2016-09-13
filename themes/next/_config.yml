@@ -29,11 +29,10 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  Android: /android
-  Python: /python
-  #about: /about
-  #archives: /archives
-  #tags: /tags
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  about: /about
   #commonweal: /404.html
 
 
@@ -46,12 +45,10 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
-  Android: th
-  Python: th
-  #about: user
-  #categories: th
-  #tags: tags
-  #archives: archive
+  categories: th
+  tags: tags
+  archives: archive
+  about: user
   #commonweal: heartbeat
 
 
@@ -123,8 +120,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/zyongjun
 
 
 # Social Links Icons
@@ -217,6 +215,8 @@ auto_excerpt:
   enable: false
   length: 150
 
+# Use Lato font
+use_font_lato: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -241,10 +241,10 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 3acb0cd63004eed8965d19acabbe4dc5
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: zyongjun
 
 # Disqus
 #disqus_shortname:
@@ -306,9 +306,9 @@ facebook_comments_plugin:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: MHaWkXhoW3hPKKwH5OwKEaaJ-gzGzoHsz
+  app_key: pPpLt6R2vIRSxjOtkLin7pq0
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/

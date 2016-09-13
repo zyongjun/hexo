@@ -46,8 +46,6 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
-    Android: Android
-    python: python
     其他: other
 tag_map:
 

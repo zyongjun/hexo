@@ -3,9 +3,9 @@ title: Android 使用Mockito测试业务逻辑<unittest 之一>
 date: 2016-09-12 02:41:46
 category: Android
 toc: true
-type: Android
 tags: 
-	- 安卓
+	- Android
+	- unittest
 ---
 
 ### **前言**
