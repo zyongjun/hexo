@@ -10,7 +10,7 @@ tags:
 
 ### **前言**
 Android中做单元测试一直是永远的痛，最近研究了些项目，发现在这些项目中无论是单元测试还是做ui测试，不管是从代码简洁还是从项目结构上都非常值得学习，这里随便写下自己的总结。
-
+<!--more-->
 ### **关于单元测试的痛**
 很多时候我们做单元测试之所以困难重重，应该大概有几个原因：
 1.  待测试类职责不清晰。类里面各个类互相依赖，尤其是如果依赖具体的Android ui我们很难在jvm上做单元测试。
@@ -22,13 +22,13 @@ Mockito使用起来比较简单，强大之处在于可以测试方法的调用�
 下面mockito使用示例来自[这里](http://www.baeldung.com/mockito-verify)
 
 *1 . 验证方法调用：*
-```
+```java
 List<String> mockedList = mock(MyList.class);
 mockedList.size();
 verify(mockedList).size();
 ```
  *2 . 验证调用次数：*
-```
+```java
 List<String> mockedList = mock(MyList.class);
 mockedList.size();
 verify(mockedList, times(1)).size();
