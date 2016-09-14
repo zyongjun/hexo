@@ -3,7 +3,7 @@ title: Android 使用Mockito测试业务逻辑<unittest 之一>
 date: 2016-09-12 02:41:46
 category: Android
 toc: true
-tags: 
+tags:
 	- Android
 	- unittest
 ---
@@ -59,7 +59,7 @@ List<String> mockedList = mock(MyList.class);
 mockedList.size();
 mockedList.add("a parameter");
 mockedList.clear();
- 
+
 InOrder inOrder = Mockito.inOrder(mockedList);
 inOrder.verify(mockedList).size();
 inOrder.verify(mockedList).add("a parameter");
@@ -78,7 +78,7 @@ List<String> mockedList = mock(MyList.class);
 mockedList.clear();
 mockedList.clear();
 mockedList.clear();
- 
+
 verify(mockedList, atLeast(1)).clear();
 verify(mockedList, atMost(10)).clear();
 ```
@@ -169,7 +169,7 @@ public void animateImageByFlag(@AnimateState int flag)
 ```
 ####**测试**
 初始化对应的依赖和测试类：
-  
+
 
 ```
     @Mock
