@@ -9,7 +9,6 @@ categories: 其他
 source/_drafts目录下生成一个new-draft.md
 
 #### 预览草稿，更改配置文件：
-
 render_drafts: true
 
 或者
