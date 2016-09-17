@@ -2,6 +2,7 @@
 title: 浅谈玩蛇的姿势（Python入门）
 date: 2016-09-14 20:37:19
 categories: Python
+keywords: Python 入门, Python 教程
 tags:
 	- Python
 ---
