@@ -399,8 +399,8 @@ images: images
 # Theme version
 version: 5.0.1
 
-donate:
-  enable: false
+
 reward_comment: 欣赏此文？求鼓励，求支持！
-alipay: https://mobilecodec.alipay.com/show.htm?code=aex00146srzcrqfmobzbba4&picSize=430
+# alipay: https://mobilecodec.alipay.com/show.htm?code=aex00146srzcrqfmobzbba4&picSize=430
+alipay: https://mobilecodec.alipay.com/show.htm?code=aex05174te1n021xucsfnfd&picSize=430
   #wechat: http://static.ixirong.com/pic/donate/wechat.png
