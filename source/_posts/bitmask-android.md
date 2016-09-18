@@ -176,3 +176,6 @@ BitMask的方便之处在于：
 
 总的来说，如果对位运算设置状态，清除状态，解包比较熟悉的话，使用BitMask还是比较方便。而对于进制转换不熟悉可以使用位移的方式，或者本地有个python解释器也是很方便的。
 BitMask位运算可以参考这篇文章：[BitMask 使用参考](http://liaohuqiu.net/cn/posts/bitmasp-and-lipo/?utm_source=tuicool&utm_medium=referral)
+
+以上，祝编程愉快 :)<br/>
+感谢阅读此文章，如果此文章对你有用或者你有任何疑问和意见，请在下方留言或者在[github](https://github.com/zyongjun)上fork我,你的鼓励对我有非凡的意义。

@@ -31,3 +31,10 @@ SQLite Expert 可以让用户管理 SQLite3 数据库并支持在不同数据库
 Pocket 主要用来保存发现的网站、文本、 视频，大概是笔记的功能，不过非常好的一点是支持离线，界面简洁干净，广告不突兀生硬。
 
 ![pocket](toolscollection/pocket.png)
+
+#### 图片优化
+##### [智图](http://zhitu.isux.us) 可使用客户端，支持生成jpg,Webp图片
+##### [TinyPng](http://www.egouz.com/topics/9839.html) 只支持Png图片
+
+以上，祝编程愉快 :)<br/>
+感谢阅读此文章，如果此文章对你有用或者你有任何疑问和意见，请在下方留言或者在[github](https://github.com/zyongjun)上fork我,你的鼓励对我有非凡的意义。
