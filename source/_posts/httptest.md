@@ -18,16 +18,15 @@ tags:  [网络测试, 工具]
 httpbin是一个网络请求响应测试网站，支持Get,Post,Put,Delete等方式，支持调试Header数据(返回对应的json),支持返回svg,png,webp,jpeg图片。其他不一一列举，能满足各种网络测试场景，这里主要以这几种为例。
 
 #### Post
-![doc](httpbintest/post.png)
-![doc](waytopython/pdoc.png)
+![图片](images/post.png)
 
 #### Header调试
 
-![img](httpbintest/httpbinheaders.png)
+![img](images/httpbinheaders.png)
 
 #### 获取图片
 
-![img](httpbintest/httpbin_img.png)
+![img](images/httpbin_img.png)
 
 是不是非常强大，在测试网络框架或者爬虫的网络测试都非常方便，用起来吧。
 
