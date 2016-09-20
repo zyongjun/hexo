@@ -3,7 +3,7 @@ title: 网络测试服务httpbin
 date: 2016-09-19 00:11:23
 categories: 工具
 keywords: 网络测试, httpbin
-tags:  [网络测试, 工具]
+tags: [网络测试, 工具]
 ---
 
 设想这样的场景：开发或者学习过程中，我们主要针对网络框架的搭建，没有特定的业务和接口，或者说手头上有些接口，数据太复杂。我们只需要方便专注于测试框架的可行性,有什么办法？
@@ -18,15 +18,17 @@ tags:  [网络测试, 工具]
 httpbin是一个网络请求响应测试网站，支持Get,Post,Put,Delete等方式，支持调试Header数据(返回对应的json),支持返回svg,png,webp,jpeg图片。其他不一一列举，能满足各种网络测试场景，这里主要以这几种为例。
 
 #### Post
-![图片](images/post.png)
+Post请求
+![图片](http://odsvc7v7q.bkt.clouddn.com/httpbin_posts.png)
 
 #### Header调试
+Header调试
 
-![img](images/httpbinheaders.png)
+  ![](http://odsvc7v7q.bkt.clouddn.com/httpbinheaders.png)
 
 #### 获取图片
 
-![img](images/httpbin_img.png)
+![img](http://odsvc7v7q.bkt.clouddn.com/httpbin_img.png)
 
 是不是非常强大，在测试网络框架或者爬虫的网络测试都非常方便，用起来吧。
 
