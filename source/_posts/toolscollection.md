@@ -36,5 +36,9 @@ Pocket 主要用来保存发现的网站、文本、 视频，大概是笔记的
 ##### [智图](http://zhitu.isux.us) 可使用客户端，支持生成jpg,Webp图片
 ##### [TinyPng](http://www.egouz.com/topics/9839.html) 只支持Png图片
 
+#### windows文件搜索神器(Everything)
+[Everything](http://www.voidtools.com/)可以非常方便的搜索文件文件夹，优点速度非常快，可以固定在状态栏，点击搜索结果，省去跳到桌面打开文件系统的麻烦，强烈推荐。
+![everything](toolscollection/everything.png)
+
 以上，祝编程愉快 :)<br/>
 感谢阅读此文章，如果此文章对你有用或者你有任何疑问和意见，请在下方留言或者在[github](https://github.com/zyongjun)上fork我,你的鼓励对我有非凡的意义。
