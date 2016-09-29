@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://www.zyongjun.site/sitemap.xml
-Sitemap: http://www.zyongjun.site/baidusitemap.xml
+Sitemap: http://www.windhike.cn/sitemap.xml
+Sitemap: http://www.windhike.cn/baidusitemap.xml

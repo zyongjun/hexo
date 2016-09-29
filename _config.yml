@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zyongjun's blog
+title: windhike
 subtitle: 为者常成，行者常至
 description: 为者常成，行者常至
-author: zyongjun
+author: windhike
 language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.zyongjun.site
+url: http://www.windhike.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -69,12 +69,11 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/zyongjun/zyongjun.github.io.git
-  # git@github.com:zyongjun/zyongjun.github.io.git
-    # coding: git@git.coding.net:zyongjun/blog.git
-    # git@git.coding.net:zyongjun/blog.git
-  branch: master
+  - type: git
+    repo: git@github.com:zyongjun/zyongjun.github.io.git,master
+  - type: git
+    repo: git@git.coding.net:zyongjun/zyongjun.git,master
+  # branch: master
 # 自动生成sitemap
 # sitemap:
 # path: sitemap.xml

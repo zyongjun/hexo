@@ -26,3 +26,10 @@ CodeFalling/hexo-asset-image
 _config.yml 中有post_asset_folder:true
 npm install https://github.com/CodeFalling/hexo-asset-image --save
 ![logo](MacGesture2-Publish/logo.jpg)
+
+### github and coding one key
+deploy:
+  - type: git
+    repo: git@github.com:zyongjun/zyongjun.github.io.git,master
+  - type: git
+    repo: git@git.coding.net:zyongjun/zyongjun.git,master
