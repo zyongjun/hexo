@@ -5,6 +5,8 @@ categories: Android
 keywords: rxJava
 tags: [rxJava,rxAndroid,map]
 ---
+作为rxJava系列的开始第一篇，这里主要介绍如何创建一个Observable,以及注意的事项。
+<!--more-->
 #### create
 ```
 Observable.create(new Observable.OnSubscribe<Integer>() {
@@ -58,4 +60,17 @@ Observable.interval(3, TimeUnit.SECONDS) //从0开始，指定时间发射一个
 Observable.just(1).repeat(5);//重复发射指定次数
 ```
 
-#### 总结
+#### 小结
+对象转Observable  
+- just 一次发射对象
+- defer 延迟传教Observable,保证创建数据是最新的
+- from 一次发射传入的数组或者iterable
+时间相关
+- interval 轮询
+- timer 延迟任务
+- repeat 重复任务
+其他:
+- create 需手动处理观察者回调
+- range 生成数列的obserable
+
+好了，学习rxJava 从学会创建observable开始。
