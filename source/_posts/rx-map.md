@@ -61,3 +61,63 @@ Observable.just(1,2,3,4,5,6,7,8,9)
               });
 ```
 flatMapIterable 基本同flatMap，只是将源数据转化为Iterable对象发射出来
+
+#### groupBy
+```
+Observable.just(1,2,3,4,5,6,7,8,9)
+                .groupBy(new Func1<Integer, Integer>() {
+                    @Override
+                    public Integer call(Integer integer) {
+                        return integer%2;
+                    }
+                })
+        .subscribe(new Action1<GroupedObservable<Integer, Integer>>() {
+            @Override
+            public void call(GroupedObservable<Integer, Integer> result) {
+//                print("============="+result.getKey());
+                if(result.getKey() == 0) {
+                    result.subscribe(new Action1<Integer>() {
+                        @Override
+                        public void call(Integer integer) {
+                            print("=============" + result.getKey() + "---" + integer);
+                        }
+                    });
+                }
+            }
+        });
+```
+groupBy根据call返回的key和数据Observable发射的integer打包成GroupedObservable发射
+
+#### map
+```
+Observable.just(1,2,3,4)
+                .map(new Func1<Integer, Integer>() {
+                    @Override
+                    public Integer call(Integer integer) {
+                        return integer*2;
+                    }
+                });
+```
+map类似flatMap，直接直接转换对象，而不是通过Observable转换
+cast是map的一种实现，直接转换成类型，转换失败会报ClassCastException
+```
+Observable.just(1,2,3)
+                .cast(Integer.class)
+```
+#### scan
+```
+Observable.just(1,2,3,4,5,6,7,8)
+               .scan(new Func2<Integer, Integer, Integer>() {
+                   @Override
+                   public Integer call(Integer integer, Integer integer2) {
+                       print("----"+integer+"---"+integer2);
+                       return integer*integer2;
+                   }
+               }).subscribe(new Action1<Integer>() {
+           @Override
+           public void call(Integer integer) {
+
+           }
+       });
+```
+call 中的变换结果作为第一个参数应用到下一个数据传入的运算中
