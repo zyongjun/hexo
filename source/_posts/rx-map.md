@@ -121,3 +121,22 @@ Observable.just(1,2,3,4,5,6,7,8)
        });
 ```
 call 中的变换结果作为第一个参数应用到下一个数据传入的运算中
+
+#### window
+```
+Observable.just(1,2,3,4,5,6)
+                .window(2)
+                .subscribe(new Action1<Observable<Integer>>() {
+                    @Override
+                    public void call(Observable<Integer> integerObservable) {
+                        print("------call----");
+                        integerObservable.subscribe(new Action1<Integer>() {
+                            @Override
+                            public void call(Integer integer) {
+                                print("--------------"+integer);
+                            }
+                        });
+                    }
+                });
+```
+window与buffer类似，发射指定数目，跳过指定数目发射Observable，而不是List.  不仅可以根据数目来分组，也可以根据时间来分组。
