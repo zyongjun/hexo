@@ -1,5 +1,5 @@
 ---
-title: rx-filter
+title: rxJava 之filter
 date: 2016-11-25 12:38:21
 categories: Android
 keywords: rxJava
@@ -107,6 +107,4 @@ take和takeLast分别表示取最前面指定数目和最后面指定数目。
 sample定期发射最近发射的一个数据，相当throttleLast
 throttleFirst定期发射最开始的一个数据
 
-```
-注意:与throttleWithTimeout和debounce的区别，这里定期的时间单位里会取数据发射，而throttleWithTimeout和debounce在规定条件下有新的数据会放弃之前的数据重新开始验证。
-```
+>注意:与throttleWithTimeout和debounce的区别，这里定期的时间单位里会取数据发射，而throttleWithTimeout和debounce在规定条件下有新的数据会放弃之前的数据重新开始验证。
