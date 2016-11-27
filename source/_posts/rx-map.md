@@ -62,6 +62,18 @@ Observable.just(1,2,3,4,5,6,7,8,9)
 ```
 flatMapIterable 基本同flatMap，只是将源数据转化为Iterable对象发射出来
 
+#### switchMap
+```
+Observable.just(1,2,3,4,5,6)
+                .switchMap(new Func1<Integer, Observable<Integer>>() {
+                    @Override
+                    public Observable<Integer> call(Integer integer) {
+                        return Observable.just(integer).subscribeOn(Schedulers.newThread());
+                    }
+                })
+```
+switchMap的用法和flatMap差不多，不过当源数据Observable发射一个数据项的时候，上一个Observable未订阅完成，测取消这个observable,停止监视这个obserable,转而监视新的数据项
+
 #### groupBy
 ```
 Observable.just(1,2,3,4,5,6,7,8,9)
