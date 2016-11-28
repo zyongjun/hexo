@@ -39,3 +39,32 @@ private Observable<Integer> createObserver(int index) {
 - call执行的时机:所有的Observable都发射过数据，任意一Observable发射数据时会call所有Observable最新发射的数据
 - call中数据的位置对应传入的Observable的位置
 - combineLatest也接受list<Observable>
+
+#### join groupJoin
+```
+Observable.just("left","left1").join(createObserver(1), new Func1<String, Observable<Long>>() {
+    @Override
+    public Observable<Long> call(String s) {
+        return Observable.timer(3000, TimeUnit.MILLISECONDS);
+    }
+}, new Func1<Integer, Observable<Long>>() {
+    @Override
+    public Observable<Long> call(Integer integer) {
+        return Observable.timer(1000, TimeUnit.MILLISECONDS);
+    }
+}, new Func2<String, Integer, String>() {
+    @Override
+    public String call(String s, Integer integer) {
+        return s+integer;
+    }
+}).subscribe(new Action1<String>() {
+    @Override
+    public void call(String s) {
+        print("-------------next"+s);
+    }
+});
+```
+基于时间窗口。。
+源数据join Observable,Observable每发射一个数据都会依次与源数据组合成结果数据发射出来。
+注意:func1接收对应的数据返回的Observable决定对应数据的有效期。
+groupJoin用法一样，只是最后组合参数有所不同
