@@ -68,3 +68,32 @@ Observable.just("left","left1").join(createObserver(1), new Func1<String, Observ
 源数据join Observable,Observable每发射一个数据都会依次与源数据组合成结果数据发射出来。
 注意:func1接收对应的数据返回的Observable决定对应数据的有效期。
 groupJoin用法一样，只是最后组合参数有所不同
+
+#### merge和concat MeregeDelayError
+```
+Observable.merge(Observable.just(1,2,3),Observable.just(4,5,6))
+          .subscribe(new Action1<Integer>() {
+              @Override
+              public void call(Integer integer) {
+                  print("----------"+integer);
+              }
+          });
+```
+merge 将多个observable发射的数据整合起来发射，像一个observable一样，但可能是交错的。
+如果不想交错可以用concat.
+
+MeregeDelayError
+```
+Observable.mergeDelayError(Observable.just(1,2,3),Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+                for (int i= 11;i<16;i++) {
+                    if (i == 14) {
+                        subscriber.onError(new Throwable("onError"));
+                    }
+                    subscriber.onNext(i);
+                }
+            }
+        }),Observable.just(6,7,8))
+```
+如果merge的过程中发生错误，后面的merge就会中断，这里使用mergeDelayError,可以暂时不发射error，当merge完成后，最后发射error
