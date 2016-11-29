@@ -97,3 +97,51 @@ Observable.mergeDelayError(Observable.just(1,2,3),Observable.create(new Observab
         }),Observable.just(6,7,8))
 ```
 如果merge的过程中发生错误，后面的merge就会中断，这里使用mergeDelayError,可以暂时不发射error，当merge完成后，最后发射error
+
+#### startWith 和switch
+```
+List<Integer> list = new ArrayList<>();
+list.add(3);
+list.add(4);
+list.add(5);
+Observable.just(1,2,3)
+//                .startWith(3,4,5)
+//                .startWith(list)
+        .startWith(Observable.just(3,4,5))
+        .subscribe(new Action1<Integer>() {
+            @Override
+            public void call(Integer integer) {
+                print("--------"+integer);
+            }
+        });
+```
+startWith操作符可以在源数据前面插入数据或者iterable对应的数据及Observable发射的数据。
+
+```
+Observable.switchOnNext(Observable.create(new Observable.OnSubscribe<Observable<Integer>>() {
+    @Override
+    public void call(Subscriber<? super Observable<Integer>> subscriber) {
+        for (int i=0;i<6;i++) {
+            subscriber.onNext(Observable.create(new Observable.OnSubscribe<Integer>() {
+                @Override
+                public void call(Subscriber<? super Integer> subscriber) {
+                    for (int i =10;i<13;i++) {
+                        subscriber.onNext(i);
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }).subscribeOn(Schedulers.newThread()));
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}))
+```
+switchOnNext接收的Observable发射的数据必须是Observable类型，作用是将发射的小Observable发射的数据转化为一个Observable将数据发射出来。
