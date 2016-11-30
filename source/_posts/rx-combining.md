@@ -145,3 +145,57 @@ Observable.switchOnNext(Observable.create(new Observable.OnSubscribe<Observable<
 }))
 ```
 switchOnNext接收的Observable发射的数据必须是Observable类型，作用是将发射的小Observable发射的数据转化为一个Observable将数据发射出来。
+> 如果发射的小的Observable在发射数据的时候，如果发射Observable的这个源Observable在发射数据，小的Observable未发射的数据会被放弃掉。
+
+#### zip 和 zipWith
+```
+Observable.zip(Observable.just(1, 3, 3),
+    Observable.just(3, 5, 6,7),
+    new Func2<Integer, Integer, String>() {
+      @Override
+      public String call(Integer integer, Integer integer2) {
+          return ""+integer+integer2;
+      }
+})
+```
+- zip这里可以接收1到9个Observable来列对齐组合Observable的数据，长度最小的Observable结合完成后就不再组合。
+- 组合是有序的
+一个参数的时候可以接收发射Observable的Observable,Observable数组或者iterable<Observable>.
+```
+List<Observable<Integer>> list = new ArrayList<>();
+list.add(Observable.just(1,2,3));
+list.add(Observable.just(1,4,3));
+list.add(Observable.just(1,6,3));
+   Observable.zip(list, new FuncN<String>() {
+
+       @Override
+       public String call(Object... args) {
+           for (Object arg : args) {
+               print("=====call==="+arg);
+           }
+           return "";
+       }
+   })
+```
+
+```
+List<Integer> list = new ArrayList<>();
+list.add(3);
+list.add(4);
+list.add(5);
+Observable.just(1,2,3)
+        .zipWith(list, new Func2<Integer, Integer, String>() {
+            @Override
+            public String call(Integer integer, Integer integer2) {
+                return ""+integer+integer2;
+            }
+        })
+//  .zipWith(Observable.just(3, 4, 5),
+      new Func2<Integer, Integer, String>() {
+//               @Override
+//       public String call(Integer integer, Integer integer2) {
+//             return ""+integer+integer2;
+//       }
+//    })
+```
+zipWith连接调用Observable和iterable或Observable,不过好像只能对齐组合两个Observable或Observable与iterable.
