@@ -5,6 +5,8 @@ categories: Android
 keywords: rxJava
 tags: [rxJava,rxAndroid]
 ---
+rxjava 提供了丰富的错误处理丰富，根据需要可以统一处理错误。
+<!--more-->
 #### catch
 这里先生成一个产生exception的Observable
 ```
