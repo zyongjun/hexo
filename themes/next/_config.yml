@@ -246,8 +246,8 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics: 3acb0cd63004eed8965d19acabbe4dc5
-
+# baidu_analytics: 3acb0cd63004eed8965d19acabbe4dc5
+baidu_analytics: 3365efc9914f027df12626755bfa8862
 # Duoshuo ShortName
 duoshuo_shortname: zyongjun
 
