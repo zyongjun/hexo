@@ -1,5 +1,5 @@
 ---
-title: rx之错误处理
+title: rxJava之错误处理相关
 date: 2016-12-01 11:18:26
 categories: Android
 keywords: rxJava
@@ -125,6 +125,7 @@ source.retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
 ```
 - 可以通过flatmap对重试做延迟等处理
 - zipWith+flatmap可以限制次数和延迟，以及重试指定的次数做处理
+
 ```
 source.retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
               @Override public Observable<?> call(Observable<? extends Throwable> errors) {
