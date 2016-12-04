@@ -60,6 +60,7 @@ doxxx主要用于回调
           });
  ```
 - timeStamp则是封装来时间戳和源数据.
+
  ```
   Observable.just(1,2,3)
     .timeInterval()
