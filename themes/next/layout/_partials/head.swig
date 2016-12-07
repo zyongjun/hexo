@@ -50,7 +50,6 @@
   <meta name="keywords" content="{{ theme.keywords }}" />
 {% endif %}
 
-
 {% if theme.rss === '' and config.feed and config.feed.path %}
   {% set theme.rss = config.feed.path %}
 {% endif %}

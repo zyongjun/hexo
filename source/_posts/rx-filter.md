@@ -2,8 +2,8 @@
 title: rxJava 之filter
 date: 2016-11-25 12:38:21
 categories: Android
-keywords: rxJava
-tags: [rxJava,rxAndroid,filter]
+keywords: rxJava, filter, 过滤, windhike
+tags: [rxJava]
 ---
 实际项目中，业务逻辑往往比较复杂，源数据往往不是直接来使用和显示这么简单。除了用上一篇中的变换原始数据，还可以对源数据进行过滤操作。
 

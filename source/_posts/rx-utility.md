@@ -2,8 +2,8 @@
 title: rxJava之utility有用的辅助操作符
 date: 2016-12-04 22:34:39
 categories: Android
-keywords: rxJava
-tags: [rxJava,rxAndroid]
+keywords: rxJava,rxAndroid,windhike,操作符
+tags: [rxJava]
 ---
 前面按分类介绍了各种操作符，这一节来探究下一些有用的辅助操作符。
 <!--more-->

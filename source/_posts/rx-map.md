@@ -2,8 +2,8 @@
 title: rxJava之变换Obserables
 date: 2016-10-25 23:59:15
 categories: Android
-keywords: rxJava
-tags: [rxJava,rxAndroid,map]
+keywords: rxJava,rxAndroid,map,windhike
+tags: [rxJava]
 ---
 这一节来了解如何变换Observable为我们需要的。
 
