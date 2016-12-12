@@ -3,7 +3,7 @@ title: retrofit2.0完全解析
 date: 2016-09-18 23:18:48
 categories: Android
 keywords: Retrofit,Retrofit2.0
-tags: [Retrofit,Android]
+tags: [Retrofit]
 ---
 
 #### REST客户端

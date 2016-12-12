@@ -2,8 +2,8 @@
 title: rxjava 之创建Observable
 date: 2016-10-25 23:59:15
 categories: Android
-keywords: rxJava
-tags: [rxJava,rxAndroid,map]
+keywords: rxJava,rxAndroid,创建Observable,windhike
+tags: [rxJava]
 ---
 作为rxJava系列的开始第一篇，这里主要介绍如何创建一个Observable,以及注意的事项。
 <!--more-->
