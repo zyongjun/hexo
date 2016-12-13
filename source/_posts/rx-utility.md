@@ -26,11 +26,20 @@ Observable.just("a","b","c")
 doxxx主要用于回调
 - doOnEach
 - doOnNext
+
+```
+1.可以用于调试
+2.用于保存和缓存网络结果。不过会等待完成后才会调用onNext,如果要不延迟后面执行可以使用非阻塞IO操作，可以参考[非阻塞IO操作](https://github.com/yuxingxin/RxJava-Essentials-CN/blob/master/chapter7/nonblocking_io_operations.md)
+ Schedulers.io().createWorker().schedule(() -> {}
+  ```
+
 - doOnSubscribe和doOnUnSubscribe则会在Subscriber进行订阅和反订阅的时候触发回调。当一个Observable通过OnError或者OnCompleted结束的时候，会反订阅所有的Subscriber。
 - doOnError
+  可以用于flatMap里面处理错误
 - doOnCompleted
 - doOnTerminate会在Observable结束前触发回调，无论是正常还是异常终止
 - finallyDo(**已过期使用doAfterTerminate替换**)会在Observable结束后触发回调，无论是正常还是异常终止。
+
 
 #### meterialize和deMeterialize
  meterialize操作符将OnNext/OnError/OnComplete都转化为一个Notification对象并按照原来的顺序发射出来，而deMeterialize则是执行相反的过程。
