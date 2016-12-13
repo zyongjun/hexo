@@ -2,7 +2,7 @@
 title: rxJava之错误处理相关
 date: 2016-12-01 11:18:26
 categories: Android
-keywords: rxJava, rxAndroid, 错误处理, windhike
+keywords: rxJava,rxAndroid,错误处理,windhike
 tags: [rxJava]
 ---
 rxjava 提供了丰富的错误处理丰富，根据需要可以统一处理错误。
